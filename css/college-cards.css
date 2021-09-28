@@ -1,0 +1,108 @@
+/****** Utilities *******/
+/******* Global CSS *******/
+/******* mods to base code or main.css ********/
+/******* Modules *******/
+/******** Pages ********/
+.college-card {
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 1100px;
+  flex-direction: column;
+  border-radius: 20px;
+}
+@media only screen and (max-width: 1100px) {
+  .college-card {
+    padding: 0.8em;
+    margin: 0 20px;
+  }
+}
+.college-card__banner {
+  background-color: #ccc;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+.college-card__banner__image {
+  border-radius: 10px 10px 0 0;
+}
+.college-card__title {
+  text-transform: uppercase;
+  padding: 2rem !important;
+  border-bottom: 1px solid #e6e6e6;
+  border-radius: 0 0 10px 10px;
+}
+.college-card__title::before {
+  margin-top: 0;
+  top: 33%;
+  font-size: 2em;
+  right: 2rem;
+}
+@media only screen and (max-width: 767px) {
+  .college-card__title > h2 {
+    font-size: 1.3em;
+  }
+}
+.college-card__main {
+  margin-bottom: 0;
+  border-radius: 0 0 10px 10px;
+}
+.college-card__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: none;
+  border-radius: 0 0 10px 10px !important;
+}
+@media only screen and (max-width: 768px) {
+  .college-card__content {
+    flex-direction: column;
+  }
+}
+.college-card__content > div {
+  width: 50%;
+  padding: 1em 2em;
+}
+@media only screen and (max-width: 768px) {
+  .college-card__content > div {
+    width: 100%;
+    padding: 1em;
+  }
+}
+.college-card__departments {
+  border-left: 1px solid #ddd;
+}
+@media only screen and (max-width: 768px) {
+  .college-card__departments {
+    border-left: none;
+    border-top: 1px solid #ddd;
+  }
+}
+.college-card__departments__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 100%;
+  margin-left: 0;
+  font-family: tradegothiclt, sans-serif;
+}
+.college-card__departments__list-item {
+  list-style: none !important;
+  margin-bottom: 20px;
+}
+.college-card--lindquist {
+  background: linear-gradient(90deg, #25cad3, #8446ac);
+}
+.college-card--goddard {
+  background: linear-gradient(270deg, #483627, #8446ac);
+}
+.college-card--moyes {
+  background: linear-gradient(90deg, #a3d55d, #8446ac);
+}
+
+.accordion-item, .accordion-item.is-active {
+  border-radius: 0 0 10px 10px;
+}
+
+:last-child:not(.is-active) > .accordion-title {
+  border-bottom: none;
+  border-radius: 0 0 10px 10px;
+}
