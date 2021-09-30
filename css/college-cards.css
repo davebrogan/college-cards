@@ -97,6 +97,9 @@
 .college-card--moyes {
   background: linear-gradient(90deg, #a3d55d, #8446ac);
 }
+.college-card--cos {
+  background-color: #dbd3e0;
+}
 
 .accordion-item, .accordion-item.is-active {
   border-radius: 0 0 10px 10px;
