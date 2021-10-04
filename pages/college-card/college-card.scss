@@ -1,21 +1,22 @@
+$radius: 20px;
 $bottom-radius: 0 0 10px 10px;
 $top-radius: 10px 10px 0 0;
 $card-max-width: 1100px;
+$border-width: 10px;
 
 .college-card {
-  padding: 1em;
+  padding: $border-width;
   margin: 0 auto;
   max-width: $card-max-width;
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: $radius;
   @media only screen and (max-width: $card-max-width) {
-	padding: .8em;
 	margin: 0 20px;
   }
   &__banner {
 	background-color: #ccc;
-	border-radius: 20px;
-	margin-bottom: 1rem;
+	border-radius: $top-radius;
+	margin-bottom: $border-width;
 	&__image {
 	  border-radius: $top-radius;
 	}
@@ -89,8 +90,22 @@ $card-max-width: 1100px;
 	background: linear-gradient(90deg, wsu-palette($moyes-colors, 1), wsu-palette($hlcolor-colors, 1));
   }
   &--cos {
-	//background: linear-gradient(270deg, wsu-palette($cos-colors, 1), wsu-palette($hlcolor-colors, 1));
-	background-color: wsu-palette($wcpurp-colors, 3);
+	background: linear-gradient(270deg, wsu-palette($cos-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--east {
+	background: linear-gradient(90deg, wsu-palette($east-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--dumke {
+	background: linear-gradient(270deg, wsu-palette($dumke-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--csbs {
+	background: linear-gradient(90deg, wsu-palette($csbs-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--library {
+	background: linear-gradient(270deg, wsu-palette($wsublue-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--bis {
+	background: linear-gradient(90deg, wsu-palette($wcpurp-colors, 1), wsu-palette($hlcolor-colors, 1));
   }
 }
 
@@ -101,4 +116,8 @@ $card-max-width: 1100px;
 :last-child:not(.is-active)>.accordion-title {
   border-bottom: none;
   border-radius: $bottom-radius;
+}
+
+.accordion-item:last-child>:last-child {
+  border-radius: 0 0 10px 10px;
 }
