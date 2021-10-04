@@ -1,0 +1,123 @@
+$radius: 20px;
+$bottom-radius: 0 0 10px 10px;
+$top-radius: 10px 10px 0 0;
+$card-max-width: 1100px;
+$border-width: 10px;
+
+.college-card {
+  padding: $border-width;
+  margin: 0 auto;
+  max-width: $card-max-width;
+  flex-direction: column;
+  border-radius: $radius;
+  @media only screen and (max-width: $card-max-width) {
+	margin: 0 20px;
+  }
+  &__banner {
+	background-color: #ccc;
+	border-radius: $top-radius;
+	margin-bottom: $border-width;
+	&__image {
+	  border-radius: $top-radius;
+	}
+  }
+  &__title {
+	text-transform: uppercase;
+	padding: 2rem !important;
+
+	border-bottom: 1px solid #e6e6e6;
+	border-radius: $bottom-radius;
+	&::before {
+	  margin-top: 0;
+	  top: 33%;
+	  font-size: 2em;
+	  right: 2rem;
+	}
+	& > h2 {
+	  @media #{$target-tablet-under} {
+		font-size: 1.3em;
+	  }
+	}
+  }
+  &__main {
+	margin-bottom: 0;
+	border-radius: $bottom-radius;
+  }
+  &__content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border: none;
+	border-radius: $bottom-radius !important;
+	@media only screen and (max-width: 768px) {
+	  flex-direction: column;
+	}
+	& > div {
+	  width: 50%;
+	  padding: 1em 2em;
+	  @media only screen and (max-width: 768px) {
+		width: 100%;
+		padding: 1em;
+	  }
+	}
+  }
+  &__departments {
+	border-left: 1px solid #ddd;
+	@media only screen and (max-width: 768px) {
+	  border-left: none;
+	  border-top: 1px solid #ddd;
+	}
+	&__list {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: start;
+	  height: 100%;
+	  margin-left: 0;
+	  font-family: tradegothiclt, sans-serif;
+	}
+	&__list-item {
+	  list-style: none !important;
+	  margin-bottom: 20px;
+	}
+  }
+  &--lindquist {
+	background: linear-gradient(90deg, wsu-palette($lind-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--goddard {
+	background: linear-gradient(270deg, wsu-palette($godd-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--moyes {
+	background: linear-gradient(90deg, wsu-palette($moyes-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--cos {
+	background: linear-gradient(270deg, wsu-palette($cos-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--east {
+	background: linear-gradient(90deg, wsu-palette($east-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--dumke {
+	background: linear-gradient(270deg, wsu-palette($dumke-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--csbs {
+	background: linear-gradient(90deg, wsu-palette($csbs-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--library {
+	background: linear-gradient(270deg, wsu-palette($wsublue-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+  &--bis {
+	background: linear-gradient(90deg, wsu-palette($wcpurp-colors, 1), wsu-palette($hlcolor-colors, 1));
+  }
+}
+
+.accordion-item, .accordion-item.is-active {
+  border-radius: $bottom-radius;
+}
+
+:last-child:not(.is-active)>.accordion-title {
+  border-bottom: none;
+  border-radius: $bottom-radius;
+}
+
+.accordion-item:last-child>:last-child {
+  border-radius: 0 0 10px 10px;
+}
