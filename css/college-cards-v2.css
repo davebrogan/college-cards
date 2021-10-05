@@ -7,8 +7,7 @@
   padding: 0 2vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 1fr;
-  grid-gap: 40px 2vw;
+  grid-gap: 100px 5vw;
 }
 @media only screen and (max-width: 1023px) {
   .grid-row {

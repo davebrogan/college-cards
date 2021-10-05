@@ -8,7 +8,7 @@ $border-width: 10px;
   padding: 0 2vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 40px 2vw;
+  grid-gap: 100px 5vw;
   @media #{$target-laptop-under} {
 	grid-template-columns: 1fr;
   }
